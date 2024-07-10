@@ -22,7 +22,7 @@ import java.io.IOException;
 
 public class baseTest {
 
-    static WebDriver driver;
+    public static WebDriver driver;
     public HomePage homePage;
     public LoginPage loginPage;
     public SignUpPage signUpPage;
@@ -43,13 +43,13 @@ public class baseTest {
         driver.manage().window().maximize();
         driver.get("https://www.bestbuy.com/");
         driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div[1]/div[2]/a[2]/img")).click();
-        HomePage homePage = new HomePage(driver);
-        LoginPage loginPage = new LoginPage(driver);
-        SignUpPage signUpPage = new SignUpPage(driver);
-        ShoppingCartPage shoppingCartPage = new ShoppingCartPage(driver);
-        DepartmentPage departmentPage = new DepartmentPage(driver);
-        BrandPage brandPage = new BrandPage(driver);
-        CheckoutPage checkoutPage = new CheckoutPage(driver);
+        homePage = new HomePage(driver);
+        loginPage = new LoginPage(driver);
+        signUpPage = new SignUpPage(driver);
+        shoppingCartPage = new ShoppingCartPage(driver);
+        departmentPage = new DepartmentPage(driver);
+        brandPage = new BrandPage(driver);
+        checkoutPage = new CheckoutPage(driver);
     }
 
     @AfterClass
